@@ -22,6 +22,24 @@ optional arguments:
   --output [OUTPUT]  Output file (default: error.txt)
 ```
 
+### Output
+
+Output looks like:
+
+```
+cat errors.txt
+
+2019-4-1 13:33:45 [123] User1 goes to search page
+2019-4-1 13:33:46 [123] User1 types in search text
+2019-4-1 13:33:50 [123] User1 clicks search button
+2019-4-1 13:33:54 [123] ERROR: Some exception occurred
+----
+2019-4-1 13:32:40 [190] User3 logs in
+2019-4-1 13:33:49 [190] User3 runs some job
+2019-4-1 13:33:57 [190] ERROR: Invalid input
+----
+```
+
 # Testing
 
 ```

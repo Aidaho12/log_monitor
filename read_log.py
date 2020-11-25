@@ -9,7 +9,7 @@ def find_last_3(file_name, session_id, last_line):
     session_list = []
 
     with open(file_name, 'r') as f:
-        for line_num, line in enumerate(f, 1):
+        for line_num, line in enumerate(f):
             if session_id in line:
                 session_list.append(line)
             elif last_line == line_num:
@@ -20,7 +20,7 @@ def find_last_3(file_name, session_id, last_line):
 
 def find_error(file_name, output_file):
     with open(file_name, 'r') as f:
-        for line_num, line in enumerate(f, 1):
+        for line_num, line in enumerate(f):
             if "ERROR:" in line:
                 session_id = line.split(' ')[2]
                 session_list = find_last_3(file_name, session_id, line_num)

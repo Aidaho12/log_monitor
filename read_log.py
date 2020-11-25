@@ -14,9 +14,7 @@ def find_last_3(file_name, session_id, last_line):
                 session_list.append(line)
             elif last_line == line_num:
                 break
-    print(session_list[-4:])
-    print(session_id)
-    print(last_line)
+                
     return session_list[-4:]
 
 
